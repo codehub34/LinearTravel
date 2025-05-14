@@ -26,12 +26,16 @@
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 5px white;
+  text-shadow: 2px 2px 5px white !important;
 }
 
 .text-none {
   color: inherit;
   text-shadow: none;
+}
+
+.btn-close{
+    color: white!important;
 }
 
 .hero-title {

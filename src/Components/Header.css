@@ -81,7 +81,7 @@
 
 .text-warning {
   padding: 6px;
-  background-color: rgba(197, 197, 218, 0.377);
+  background-color: rgba(197, 197, 218, 0);
   font-size: 2rem;
   border-radius: 50px;
   animation: bounce 2s infinite; /* Add the bounce animation */

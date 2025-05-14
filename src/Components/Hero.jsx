@@ -84,7 +84,7 @@ const Hero = ({ darkMode }) => {
                     setSuccessMessage("");
                 }, 5000);
 
-                setShowApplyForm(false);
+                setShowApplyForm(true);
                 setFormData({ user_name: "", email: "", phone: "", country: "", address: "", schoolLevel: "" });
             },
             (error) => {
@@ -101,7 +101,7 @@ const Hero = ({ darkMode }) => {
                 <div className="hero-content">
                    <h1 className={`hero-title ${darkMode ? "text-red text-shadow" : "text-none"}`}>Apply Now!</h1>
                     <h2 className={`hero-subtitle ${darkMode ? "text-white" : "text-dark"}`}>
-                        We streamline, <span className="typed" ref={typedElement}></span>
+                        We streamline, <br/> <span className="typed" ref={typedElement}></span>
                     </h2>
                     <p className={`hero-text ${darkMode ? "text-white" : "text-dark"}`}>
                         Linear Travel provides Liberians with a straightforward path to access Japan’s expanding job and education opportunities, ensuring a direct route from ambition to success.
@@ -114,28 +114,28 @@ const Hero = ({ darkMode }) => {
 
                     {/* Application Form - Uses Email.js */}
                     {showApplyForm && (
-                        <form className="apply-form p-3 border rounded mt-3" onSubmit={handleSubmit}>
-                            <button type="button" className="btn-close" onClick={() => setShowApplyForm(false)} aria-label="Close"></button>
+                        <form className={`apply-form p-3 border rounded mt-3 ${darkMode ? "bg-dark text-white" : "bg-white text-dark" }`} onSubmit={handleSubmit}>
+                            <button type="button" className={`btn-close ${darkMode ? "text-white" : "text-dark"}`} onClick={() => setShowApplyForm(false)} aria-label="Close"></button>
                             <h3 className="text-center">Application Form</h3>
                             <p className="text-center">Fill out the form below to apply.</p>
 
-                            <label htmlFor="user_name">Full Name:</label>
+                            <label htmlFor="user_name" className={`user_name ${darkMode ? "text-white" : "text-dark"}`}>Full Name:</label>
                             <input type="text" id="user_name" name="user_name" value={formData.user_name} onChange={handleChange} className="form-control mb-3" required />
 
-                            <label htmlFor="email">Email:</label>
+                            <label htmlFor="email" className={`email ${darkMode ? "text-white" : "text-dark"}`}>Email:</label>
                             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="form-control mb-3" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address"/>
 
-                            <label htmlFor="phone">Phone:</label>
+                            <label htmlFor="phone" className={`phone ${darkMode ? "text-white" : "text-dark"}`}>Phone:</label>
                             <input type="text" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="form-control mb-3" required pattern="[0-9]{10,15}" title="Enter a valid phone number"/>
 
-                            <label htmlFor="country">Country:</label>
+                            <label htmlFor="country" className={`Country ${darkMode ? "text-white" : "text-dark"}`}>Country:</label>
                             <input type="text" id="country" name="country" value={formData.country} onChange={handleChange} className="form-control mb-3" required />
 
-                            <label htmlFor="address">Address:</label>
+                            <label htmlFor="address" className={`address ${darkMode ? "text-white" : "text-dark"}`}>Address:</label>
                             <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} className="form-control mb-3" required />
 
-                            <label htmlFor="schoolLevel">School Level:</label>
-                            <select id="schoolLevel" name="schoolLevel" value={formData.schoolLevel} onChange={handleChange} className="form-control mb-3" required>
+                            <label htmlFor="schoolLevel" className={`schoollevel ${darkMode ? "text-white" : "text-dark"}`}>School Level:</label>
+                            <select className={`school ${darkMode ? " bg-dark text-white" : "bg-white text-dark"}`} id="schoolLevel" name="schoolLevel" value={formData.schoolLevel} onChange={handleChange} className="form-control mb-3" required>
                                 <option value="">Select Level</option>
                                 <option value="High School">High School</option>
                                 <option value="Undergraduate">Undergraduate</option>
