@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+.logo{
+ width: 120px;
+ mix-blend-mode: multiply;
+ height: 80px;
+
+}
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+
+  .btn1{
+    background-color: transparent;
+    border: none;
+    
+  }
+
+.logoContainer h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(247, 142, 15);
+}
+
+@media  (max-width: 520px) {
+  .logoContainer .logo {
+    width: 90px;
+    /* margin: 0; */
+    display: no;
+    height: inherit;
+  }
+
+  .btn1{
+    background-color: transparent;
+    border: none;
+  }
+  
+.logo{
+ mix-blend-mode: multiply;
+ height: 80px;
+
+}
+
+  .logoContainer {
+    flex-direction: column;
+  }
+}
+
+
+@media  (max-width: 768px) {
+  .logoContainer h1{
+    display: none;
+  }
+  .logoContainer .logo {
+    width: 80px;
+    /* margin: 0; */
+    display: no;
+    height: inherit;
+  }
+
+  .logoContainer {
+    flex-direction: column;
+  }
+}
+
+.logoContainer .mb-0{
+  padding-bottom: 15px;
+}
+.text-primary{
+  padding: 5px;
+  /* background-color: rgba(41, 41, 61, 0.123); */
+  font-size: 2rem;
+  border-radius: 50px;
+  animation: bounce 2s infinite; /* Add the bounce animation */
+}
+
+.text-warning {
+  padding: 6px;
+  background-color: rgba(197, 197, 218, 0.377);
+  font-size: 2rem;
+  border-radius: 50px;
+  animation: bounce 2s infinite; /* Add the bounce animation */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1); /* Element starts and ends at its original position and size */
+  }
+  50% {
+    transform: translateY(-1px) scale(1.1); /* Element moves upward and slightly enlarges at the peak */
+    background-color: rgba(165, 42, 42, 0);
+  }
+}
