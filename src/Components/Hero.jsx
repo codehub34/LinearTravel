@@ -135,7 +135,7 @@ const Hero = ({ darkMode }) => {
                             <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} className="form-control mb-3" required />
 
                             <label htmlFor="schoolLevel" className={`schoollevel ${darkMode ? "text-white" : "text-dark"}`}>School Level:</label>
-                            <select className={`school ${darkMode ? " bg-dark text-white" : "bg-white text-dark"}`} id="schoolLevel" name="schoolLevel" value={formData.schoolLevel} onChange={handleChange} className="form-control mb-3" required>
+                            <select id="schoolLevel" name="schoolLevel" value={formData.schoolLevel} onChange={handleChange} className="form-control mb-3" required>
                                 <option value="">Select Level</option>
                                 <option value="High School">High School</option>
                                 <option value="Undergraduate">Undergraduate</option>
