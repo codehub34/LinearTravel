@@ -4,7 +4,7 @@ import Logo from "/src/images/lineartravels_logo-br.png"; // Correct relative pa
 import {
   FaBars, FaTimes, FaHome, FaUser, FaTools,
   FaProjectDiagram, FaEnvelope, FaGithub, FaLinkedin,
-  FaTwitter, FaSun, FaMoon
+  FaTwitter, FaSun, FaMoon, 
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 
