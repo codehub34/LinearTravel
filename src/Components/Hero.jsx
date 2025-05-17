@@ -96,7 +96,7 @@ const Hero = ({ darkMode }) => {
 
     return (
         <section className={`hero ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`} id="home">
-            <div className="container text-center">
+            <div className="containerH text-center">
                 {/* Hero Content */}
                 <div className="hero-content">
                    <h1 className={`hero-title ${darkMode ? "text-red text-shadow" : "text-none"}`}>Apply Now!!</h1>
@@ -104,7 +104,9 @@ const Hero = ({ darkMode }) => {
                         We streamline, <br/> <span className="typed" ref={typedElement}></span>
                     </h2>
                     <p className={`hero-text ${darkMode ? "text-white" : "text-dark"}`}>
-                        Linear Travel provides Liberians with a straightforward path to access Japan’s expanding job and education opportunities, ensuring a direct route from ambition to success.
+                        Linear Travel provides Liberians with a straightforward path to 
+                        access Japan’s expanding job and education opportunities, 
+                        ensuring a direct route from ambition to success.
                     </p>
 
                     {/* Apply Button */}
