@@ -99,7 +99,7 @@ const Hero = ({ darkMode }) => {
             <div className="container text-center">
                 {/* Hero Content */}
                 <div className="hero-content">
-                   <h1 className={`hero-title ${darkMode ? "text-red text-shadow" : "text-none"}`}>Apply Now!</h1>
+                   <h1 className={`hero-title ${darkMode ? "text-red text-shadow" : "text-none"}`}>Apply Now!!</h1>
                     <h2 className={`hero-subtitle ${darkMode ? "text-white" : "text-dark"}`}>
                         We streamline, <br/> <span className="typed" ref={typedElement}></span>
                     </h2>
