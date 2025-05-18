@@ -1,18 +1,15 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Footer.css";
 
 const Footer = () => {
     return (
         <footer className="footer bg-dark text-white py-4">
-            <div className="container text-center">
-                <h4>Linear Travels ✈️</h4>
-                <p>Your gateway to seamless travel experiences.</p>
-
-                {/* Contact Info */}
-                <div className="contact-info mt-3">
-                    <p><FaEnvelope /> Email: lineartravell@gmail.com</p>
-                    <p><FaPhone /> Phone: +1 (763) 346-3875</p>
+            <div className="container text-center" id="footer-container">
+                {/* Logo */}    
+                <div className="logo-icon mb-3 text-white" >
+                    <img src="/src/images/lineartravels_logo-br.png" alt="Linear Travels Logo" width="100" />    
                 </div>
 
                 {/* Social Media Links */}
@@ -30,7 +27,26 @@ const Footer = () => {
                     <a href="#contact" className="text-white mx-2">Contact</a>
                 </div>
 
-                <p className="mt-4">© 2025 Linear Travels. All rights reserved.</p>
+            </div>
+            <div id="footer-bottom">
+
+                {/* Address */}
+                <div>
+                     <h4>Linear Travels ✈️</h4>
+                     <p>Your gateway to seamless travel experiences.</p>
+                </div>
+                 {/* Contact Info */}
+                <div className="contact-info mt-3">
+                    <p><FaEnvelope /> Email: lineartravell@gmail.com</p>
+                    <p><FaPhone /> Phone: +1 (763) 346-3875</p>
+                </div>
+
+                {/* Contact Information */}
+                <div className="container2 text-center">
+                    <p className="mb-0">© {new Date().getFullYear()} Linear Travels. All rights reserved.</p>
+                    <p>Designed by <a href="mailto:masskeita64@gmail.com">Linear Travels Team</a></p>
+                    <p>Terms of Service | Privacy Policy</p>
+                </div>
             </div>
         </footer>
     );
