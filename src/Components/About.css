@@ -1,0 +1,75 @@
+.about-container {
+
+    padding: 40px;
+    text-align: center;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between items */
+   
+}
+
+.vision_items h1,
+.mission_items h1,
+.coreValue_items h1 {
+    font-size: 1.8rem;
+    color: #030b79; /* Green */
+    margin-bottom: 20px;
+    font-weight: bold;
+   
+}
+
+.missionBtn button,
+.visionBtn button,
+.coreValueBtn button {
+    background-color: #030b79; /* Green */
+    border: none;
+    color: white;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: inset 100px 0 0 orangered;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: inset 200px 0 0 orangered;
+    color: black
+}
+
+
+@media screen and (max-width: 768px) {
+    .about-wrapper {
+        flex-wrap: wrap-reverse;
+        align-items: center;
+    }
+
+    
+.missionBtn button,
+.visionBtn button,
+.coreValueBtn button {
+    background-color: #030b79; /* Green */
+    border: none;
+    color: white;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 orangered;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+button:hover {
+    box-shadow: inset 200px 0 0 orangered;
+    color: black
+}
+    
+}

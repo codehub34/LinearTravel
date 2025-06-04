@@ -266,7 +266,7 @@ input [type="submit"] {
     }
 
     #home {
-        padding: 6rem 1rem;
+        padding: 4rem 1rem 1rem 1rem; /* Adjusted for better spacing */ 
     }
 
     .hero-content h1 {
