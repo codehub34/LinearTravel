@@ -38,7 +38,12 @@ const Footer = () => {
                  {/* Contact Info */}
                 <div className="contact-info mt-3">
                     <p><FaEnvelope /> Email: lineartravell@gmail.com</p>
-                    <p><FaPhone /> Phone: +1 (763) 346-3875</p>
+                    <p>
+                     <FaPhone /> 
+                      Phone: <a href="https://wa.me/7633463875" target="_blank" rel="noopener noreferrer">
+                       +1 (763) 346-3875
+                             </a>
+                    </p>
                 </div>
 
                 {/* Contact Information */}

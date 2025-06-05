@@ -1,15 +1,21 @@
 .about-container {
-
+    padding: 50px 20px;
+    background: linear-gradient(to top, rgba(160, 18, 18, 0.185), rgba(7, 7, 99, 0.527)), url('/src/images/Core_Value_bg.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensures text remains readable */
     padding: 40px;
     text-align: center;
 }
 
+
 .about-wrapper{
-    display: flex;
-    flex-direction: row;
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between items */
+    margin: 0 auto;
    
 }
 
@@ -17,7 +23,7 @@
 .mission_items h1,
 .coreValue_items h1 {
     font-size: 1.8rem;
-    color: #030b79; /* Green */
+    color: #07315e; /* Green */
     margin-bottom: 20px;
     font-weight: bold;
    
@@ -26,23 +32,57 @@
 .missionBtn button,
 .visionBtn button,
 .coreValueBtn button {
-    background-color: #030b79; /* Green */
+    background-color: #07315e; /* Green */
     border: none;
     color: white;
-    width: 200px;
+    width: 190px;
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: inset 100px 0 0 orangered;
+    box-shadow: inset 0 0 0 orangered;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.mission_items,
+.vision_items,
+.coreValue_items {
+    background-color: #030b7900;
+    /* border: 1px solid #030b79; */
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission_items:hover,
+.vision_items:hover,
+.coreValue_items:hover {
+    transform: translateY(-10px);
+}
+
 
 button:hover {
     box-shadow: inset 200px 0 0 orangered;
     color: black
 }
 
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeInUp 1s ease-in-out;
+}
 
 @media screen and (max-width: 768px) {
     .about-wrapper {
@@ -54,7 +94,7 @@ button:hover {
 .missionBtn button,
 .visionBtn button,
 .coreValueBtn button {
-    background-color: #030b79; /* Green */
+    background-color: #07315e; /* Green */
     border: none;
     color: white;
     width: 200px;
@@ -71,5 +111,16 @@ button:hover {
     box-shadow: inset 200px 0 0 orangered;
     color: black
 }
+
+    .about-container {
+        padding: 20px;
+        margin-top: 45px;
+    }
+
+    .vision_items h1,
+    .mission_items h1,
+    .coreValue_items h1 {
+        font-size: 1.5rem;
+    }
     
 }

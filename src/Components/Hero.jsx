@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "/src/Components/Hero.css";
 
 import image1 from "/src/images/Japan.jpg";
-import image2 from "/src/images/LinearTravel.png";
+import image2 from "/src/images/lineartravels_logo-br.png";
 
 const Hero = ({ darkMode }) => {
     // State for form visibility
@@ -82,10 +82,13 @@ const Hero = ({ darkMode }) => {
                 // Automatically clear success message after 5 seconds
                 setTimeout(() => {
                     setSuccessMessage("");
-                }, 5000);
+                }, 1000);
 
-                setShowApplyForm(true);
+                setShowApplyForm(false); 
                 setFormData({ user_name: "", email: "", phone: "", country: "", address: "", schoolLevel: "" });
+                setTimeout(() => {
+                     alert(`Thank you for applying, ${formData.user_name}! We will review your application and get back to you soon.`);
+                }, 2000);
             },
             (error) => {
                 console.error("Error sending email:", error);
