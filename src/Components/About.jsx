@@ -9,7 +9,7 @@ function About({ darkMode }) {
     const openPdf = (event) => {
         event.preventDefault();
         // Open the PDF in a new tab
-        window.open('/src/Brand_Pillars_ Linear_Travel.pdf', '_blank');
+        window.open('/Brand_Pillars_ Linear_Travel.pdf', '_blank');
     }
 
     return (
